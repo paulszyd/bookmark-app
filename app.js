@@ -17,7 +17,7 @@ export async function signUp() {
 export async function signIn() {
   const email = document.getElementById('email').value
   const password = document.getElementById('password').value
-  const { error } = await supabase.auth.signIn({ email, password })
+const { error } = await supabase.auth.signInWithPassword({ email, password })
   if (error) {
     document.getElementById('auth-message').textContent = error.message
   } else {
