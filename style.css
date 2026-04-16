@@ -1,0 +1,73 @@
+Let's update the index.html and app.js to make that happen. First, replace the entire contents of style.css with this so the table looks clean:
+cssbody {
+  font-family: sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #333;
+}
+
+h1 { margin-bottom: 8px; }
+
+input, textarea, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: auto;
+  cursor: pointer;
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+}
+
+button:hover { background: #4f46e5; }
+
+button.delete-btn {
+  background: #ef4444;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+button.delete-btn:hover { background: #dc2626; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #f9fafb;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+th:hover { background: #f3f4f6; }
+
+th .sort-icon { margin-left: 6px; font-size: 11px; color: #9ca3af; }
+th.active .sort-icon { color: #6366f1; }
+
+tr:hover td { background: #fafafa; }
+
+td a { color: #6366f1; text-decoration: none; }
+td a:hover { text-decoration: underline; }
+
+#auth-section { max-width: 400px; }
+#add-section { margin-bottom: 24px; }
+#add-section input, #add-section textarea { max-width: 500px; }
