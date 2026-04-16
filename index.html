@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="app">
+    <h1>My Bookmarks</h1>
+
+    <div id="auth-section">
+      <h2>Sign In</h2>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="signUp()">Sign Up</button>
+      <button onclick="signIn()">Sign In</button>
+      <p id="auth-message"></p>
+    </div>
+
+    <div id="bookmark-section" style="display:none">
+      <button onclick="signOut()">Sign Out</button>
+      <h2>Add a Bookmark</h2>
+      <input type="url" id="url" placeholder="https://..." />
+      <input type="text" id="title" placeholder="Title" />
+      <textarea id="notes" placeholder="Notes (optional)"></textarea>
+      <button onclick="addBookmark()">Save Bookmark</button>
+
+      <h2>My Bookmarks</h2>
+      <div id="bookmark-list"></div>
+    </div>
+  </div>
+
+ <script type="module">
+  import { signUp, signIn, signOut, addBookmark, deleteBookmark } from './app.js'
+  window.signUp = signUp
+  window.signIn = signIn
+  window.signOut = signOut
+  window.addBookmark = addBookmark
+  window.deleteBookmark = deleteBookmark
+</script>
+</body>
+</html>
